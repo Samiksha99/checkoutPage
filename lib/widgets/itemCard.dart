@@ -96,18 +96,6 @@ class _ItemCardState extends State<ItemCard> {
                         Row(
                           children: [
                             MaterialButton(
-                              onPressed: add,
-                              color: Colors.cyan[600],
-                              textColor: Colors.white,
-                              child: Icon(
-                                Icons.add,
-                                size: vpH*0.03,
-                              ),
-                              padding: EdgeInsets.all(5),
-                              shape: CircleBorder(),
-                            ),
-                            Text('$_n', style: TextStyle(fontSize: vpH*0.02),),
-                            MaterialButton(
                               onPressed: minus,
                               color: Colors.cyan[600],
                               textColor: Colors.white,
@@ -117,7 +105,19 @@ class _ItemCardState extends State<ItemCard> {
                               ),
                               padding: EdgeInsets.all(5),
                               shape: CircleBorder(),
-                            ),                      
+                            ),   
+                            Text('$_n', style: TextStyle(fontSize: vpH*0.02),),
+                            MaterialButton(
+                              onPressed: add,
+                              color: Colors.cyan[600],
+                              textColor: Colors.white,
+                              child: Icon(
+                                Icons.add,
+                                size: vpH*0.03,
+                              ),
+                              padding: EdgeInsets.all(5),
+                              shape: CircleBorder(),
+                            ),                   
                           ],
                         ),
                       ],

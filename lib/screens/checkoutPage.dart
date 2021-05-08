@@ -1,4 +1,5 @@
 import 'package:checkoutPage/helper/dimensions.dart';
+import 'package:checkoutPage/screens/address.dart';
 import 'package:checkoutPage/widgets/itemCard.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +18,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           leading: Icon(Icons.arrow_back_ios_rounded, color: Colors.cyan[600],),
-          title: Center(
-            child: Text("My Shopping Cart",
+          title: Text("My Shopping Cart",
               style:TextStyle(
                 color: Colors.cyan[400],
                 fontSize: vpH*0.03,
                 fontWeight: FontWeight.w700
               ),
-            ),
           ),
         ),
         bottomNavigationBar: new BottomAppBar(
@@ -112,7 +111,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text("Rs 250 ",
+                            Text("Price ",
                               style:TextStyle(
                                   color: Colors.black,
                                   fontSize: vpH*0.02,
@@ -131,7 +130,15 @@ class _CheckoutPageState extends State<CheckoutPage> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                    return AddressPage();
+                                  },
+                                ),
+                              );
+                            },
                             color: Colors.cyan[600],
                             child: Text("Pay Now", 
                               style:TextStyle(
